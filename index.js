@@ -1,7 +1,12 @@
-console.log("Hello from index.js!");
 
-setTimeout(()=>{console.log("settimeout..")},100);
+ 
+ const apiCall= new Promise((resolve, reject) => {
+
+  reject("API call failed");
 
 
-console.log("hey world!!")
-
+}).then(message => {
+  console.log(message);
+}).catch(error => {
+  console.error('Error:88888', error);
+});
